@@ -192,6 +192,7 @@ The Docker image consumes `requirements.txt`, so re-run the export whenever you 
 - For local experimentation without Docker support, use the fallback dataset (`python scripts/sync_tools.py --fallback-only`).
 - Set `KALI_TOOL_DATA=/absolute/path/to/custom.json` to point the server at an alternate dataset without rebuilding the image.
 - Manage execution guardrails via `config/policy.yaml` (allowed flags, timeouts, target whitelists). Override at runtime with `KALI_POLICY_FILE`, `KALI_MAX_CONCURRENT_RUNS`, `KALI_DEFAULT_TIMEOUT`, `KALI_TARGET_WHITELIST`, and `KALI_EXTRA_PATHS` (to prepend custom binaries to `PATH`).
+- To constrain resource usage, set `resource_limits` in `config/policy.yaml` (global defaults or per-tool overrides). Supported keys are `cpu_time_limit` (seconds of CPU time) and `memory_limit_mb` (address space in MiB).
 - Meta-packages are installed opportunistically during the Docker build. If a `kali-tools-*` meta package is not available for the current architecture (for example, some sets are x86_64-only), it is skipped automatically and will not appear in the generated dataset.
 
 ## Release workflow

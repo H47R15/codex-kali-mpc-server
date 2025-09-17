@@ -4,6 +4,9 @@
 global:
   max_concurrent_runs: 2
   default_timeout: 60
+  resource_limits:
+    cpu_time_limit: 120
+    memory_limit_mb: 512
 
 tools:
   nmap:
@@ -17,6 +20,9 @@ tools:
       - "192.168."
       - "10."
     default_timeout: 120
+    resource_limits:
+      cpu_time_limit: 60
+      memory_limit_mb: 256
   theharvester:
     allowed_flags: []
   dnsenum:
