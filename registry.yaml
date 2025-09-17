@@ -1,0 +1,34 @@
+  kali:
+    description: "Helper utilities for Kali-based security workflows (tool lookups, CVE summaries)."
+    title: "Kali Security"
+    type: server
+    dateAdded: "2025-01-24T00:00:00Z"
+    image: kali-security-server:latest
+    ref: ""
+    readme: ""
+    toolsUrl: ""
+    source: ""
+    upstream: ""
+    icon: ""
+    tools:
+      - name: list_categories
+      - name: describe_tool
+      - name: suggest_tools
+      - name: latest_cves
+    secrets:
+      - name: KALI_TARGET_WHITELIST
+        env: KALI_TARGET_WHITELIST
+        example: "192.168.1.,10.0.0."
+      - name: KALI_MAX_SCAN_TIME
+        env: KALI_MAX_SCAN_TIME
+        example: "300"
+    metadata:
+      category: monitoring
+      tags:
+        - security
+        - pentesting
+        - vulnerability
+        - scanning
+        - kali
+      license: MIT
+      owner: local

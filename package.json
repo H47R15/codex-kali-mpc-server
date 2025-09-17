@@ -1,0 +1,15 @@
+{
+  "name": "kali-mcp-server",
+  "version": "0.0.0-development",
+  "private": true,
+  "description": "Semantic-release configuration for the Kali MCP server",
+  "license": "MIT",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^11.0.0",
+    "semantic-release": "^23.0.0"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release"
+  }
+}
