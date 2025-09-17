@@ -64,7 +64,7 @@ registry:
     title: "Kali Security"
     type: server
     dateAdded: "2025-01-24T00:00:00Z"
-    image: kali--mcp-server:latest
+    image: ghcr.io/h47r15/kali-mcp-server:latest
     ref: ""
     readme: ""
     toolsUrl: ""
@@ -73,17 +73,28 @@ registry:
     icon: https://midfeed.com/fav.svg
     tools:
       - name: list_categories
+      - name: list_tools
       - name: describe_tool
+      - name: tool_details
+      - name: search_tools
       - name: suggest_tools
       - name: latest_cves
       - name: run_kali_tool
-    secrets:
+      - name: run_kali_tool_stream
+      - name: export_run_history
+    env:
+      - name: KALI_TOOL_DATA
+        example: /mnt/datasets/custom_kali_tools.json
+      - name: KALI_POLICY_FILE
+        example: /mnt/config/policy.yaml
       - name: KALI_TARGET_WHITELIST
-        env: KALI_TARGET_WHITELIST
-        example: "192.168.1.,10.0.0."
-      - name: KALI_MAX_SCAN_TIME
-        env: KALI_MAX_SCAN_TIME
-        example: "300"
+        example: "192.168.1.,10.0."
+      - name: KALI_MAX_CONCURRENT_RUNS
+        example: "2"
+      - name: KALI_DEFAULT_TIMEOUT
+        example: "60"
+      - name: KALI_EXTRA_PATHS
+        example: /opt/security/bin
     metadata:
       category: monitoring
       tags:

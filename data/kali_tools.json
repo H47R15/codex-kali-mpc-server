@@ -1,0 +1,122 @@
+[
+  {
+    "binary_path": "/usr/bin/nmap",
+    "category": "Information Gathering",
+    "default_args": "",
+    "name": "nmap",
+    "package": "kali-tools-sample",
+    "summary": "Network scanner used for host discovery and port auditing."
+  },
+  {
+    "binary_path": "/usr/bin/theHarvester",
+    "category": "Information Gathering",
+    "default_args": "",
+    "name": "theHarvester",
+    "package": "kali-tools-sample",
+    "summary": "Open source intelligence gathering tool for emails, subdomains, and names."
+  },
+  {
+    "binary_path": "/usr/bin/dnsenum",
+    "category": "Information Gathering",
+    "default_args": "",
+    "name": "dnsenum",
+    "package": "kali-tools-sample",
+    "summary": "Performs DNS enumeration to discover hosts and records."
+  },
+  {
+    "binary_path": "/usr/bin/nikto",
+    "category": "Vulnerability Analysis",
+    "default_args": "",
+    "name": "nikto",
+    "package": "kali-tools-sample",
+    "summary": "Web server scanner that tests for over 6700 potentially dangerous files and programs."
+  },
+  {
+    "binary_path": "/usr/bin/openvas",
+    "category": "Vulnerability Analysis",
+    "default_args": "",
+    "name": "openvas",
+    "package": "kali-tools-sample",
+    "summary": "Full-featured vulnerability scanner with scheduled scan support."
+  },
+  {
+    "binary_path": "/usr/bin/sqlmap",
+    "category": "Vulnerability Analysis",
+    "default_args": "",
+    "name": "sqlmap",
+    "package": "kali-tools-sample",
+    "summary": "Automates detection and exploitation of SQL injection flaws."
+  },
+  {
+    "binary_path": "/usr/bin/aircrack-ng",
+    "category": "Wireless Attacks",
+    "default_args": "",
+    "name": "aircrack-ng",
+    "package": "kali-tools-sample",
+    "summary": "Suite for capturing and cracking Wi-Fi network keys."
+  },
+  {
+    "binary_path": "/usr/bin/reaver",
+    "category": "Wireless Attacks",
+    "default_args": "",
+    "name": "reaver",
+    "package": "kali-tools-sample",
+    "summary": "Implements brute force attack against Wi-Fi Protected Setup."
+  },
+  {
+    "binary_path": "/usr/bin/cowpatty",
+    "category": "Wireless Attacks",
+    "default_args": "",
+    "name": "cowpatty",
+    "package": "kali-tools-sample",
+    "summary": "Performs dictionary attacks against WPA-PSK networks."
+  },
+  {
+    "binary_path": "/usr/bin/metasploit-framework",
+    "category": "Exploitation",
+    "default_args": "",
+    "name": "metasploit-framework",
+    "package": "kali-tools-sample",
+    "summary": "Collection of exploit modules, payloads, and post-exploitation tools."
+  },
+  {
+    "binary_path": "/usr/bin/beef",
+    "category": "Exploitation",
+    "default_args": "",
+    "name": "beef",
+    "package": "kali-tools-sample",
+    "summary": "Browser exploitation framework focused on client-side attacks."
+  },
+  {
+    "binary_path": "/usr/bin/searchsploit",
+    "category": "Exploitation",
+    "default_args": "",
+    "name": "searchsploit",
+    "package": "kali-tools-sample",
+    "summary": "Command-line search utility for Exploit-DB advisories."
+  },
+  {
+    "binary_path": "/usr/bin/mimikatz",
+    "category": "Post Exploitation",
+    "default_args": "",
+    "name": "mimikatz",
+    "package": "kali-tools-sample",
+    "summary": "Extracts credentials and performs post-exploitation tricks on Windows."
+  },
+  {
+    "binary_path": "/usr/bin/empire",
+    "category": "Post Exploitation",
+    "default_args": "",
+    "name": "empire",
+    "package": "kali-tools-sample",
+    "summary": "PowerShell and Python post-exploitation agent."
+  },
+  {
+    "binary_path": "/usr/bin/crackmapexec",
+    "category": "Post Exploitation",
+    "default_args": "",
+    "name": "crackmapexec",
+    "package": "kali-tools-sample",
+    "summary": "Swiss army knife for pentesting Windows/Active Directory environments."
+  }
+]

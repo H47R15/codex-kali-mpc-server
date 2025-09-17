@@ -1,0 +1,125 @@
+[
+  {
+    "name": "list_categories",
+    "description": "List available Kali tool categories derived from the dataset.",
+    "arguments": []
+  },
+  {
+    "name": "list_tools",
+    "description": "List the tools that belong to a specific category.",
+    "arguments": [
+      {
+        "name": "category",
+        "type": "string",
+        "desc": "Category name returned by list_categories (case-sensitive)."
+      }
+    ]
+  },
+  {
+    "name": "describe_tool",
+    "description": "Summarise a Kali tool and surface package/binary details.",
+    "arguments": [
+      {
+        "name": "tool_name",
+        "type": "string",
+        "desc": "Tool identifier (for example, nmap)."
+      }
+    ]
+  },
+  {
+    "name": "tool_details",
+    "description": "Return rich metadata for a Kali tool including package and binary path.",
+    "arguments": [
+      {
+        "name": "tool_name",
+        "type": "string",
+        "desc": "Tool identifier (for example, sqlmap)."
+      }
+    ]
+  },
+  {
+    "name": "search_tools",
+    "description": "Perform fuzzy search against the dataset by package, category, or summary.",
+    "arguments": [
+      {
+        "name": "query",
+        "type": "string",
+        "desc": "Search expression (keywords like \"wireless\" or \"password audit\")."
+      },
+      {
+        "name": "limit",
+        "type": "integer",
+        "desc": "Maximum number of results to return (default 5)."
+      }
+    ]
+  },
+  {
+    "name": "suggest_tools",
+    "description": "Suggest Kali tooling for a free-form task description using fuzzy matching.",
+    "arguments": [
+      {
+        "name": "task",
+        "type": "string",
+        "desc": "Plain-language task description to search against the catalog."
+      }
+    ]
+  },
+  {
+    "name": "latest_cves",
+    "description": "Fetch recent CVE summaries from the NVD API matching a keyword.",
+    "arguments": [
+      {
+        "name": "keyword",
+        "type": "string",
+        "desc": "Keyword to filter CVEs (e.g., openssl)."
+      }
+    ]
+  },
+  {
+    "name": "run_kali_tool",
+    "description": "Execute a dataset-backed Kali binary inside the container and return stdout/stderr.",
+    "arguments": [
+      {
+        "name": "tool_name",
+        "type": "string",
+        "desc": "Tool to execute (must exist in the dataset, e.g., nmap)."
+      },
+      {
+        "name": "arguments",
+        "type": "string",
+        "desc": "Optional command-line arguments passed verbatim to the tool."
+      },
+      {
+        "name": "timeout",
+        "type": "integer",
+        "desc": "Override execution timeout in seconds (default comes from policy)."
+      }
+    ]
+  },
+  {
+    "name": "run_kali_tool_stream",
+    "description": "Stream stdout/stderr from a dataset-backed Kali binary in real time.",
+    "arguments": [
+      {
+        "name": "tool_name",
+        "type": "string",
+        "desc": "Tool to execute (must exist in the dataset, e.g., nmap)."
+      },
+      {
+        "name": "arguments",
+        "type": "string",
+        "desc": "Optional command-line arguments passed verbatim to the tool."
+      },
+      {
+        "name": "timeout",
+        "type": "integer",
+        "desc": "Override execution timeout in seconds (default comes from policy)."
+      }
+    ]
+  },
+  {
+    "name": "export_run_history",
+    "description": "Fetch recent tool execution metadata for auditing purposes.",
+    "arguments": []
+  }
+]

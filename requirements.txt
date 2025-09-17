@@ -1,5 +1,7 @@
 
 mcp[cli]>=1.2.0
-httpx
+httpx>=0.27
+rapidfuzz>=3.8.0
+PyYAML>=6.0.2
 
 # Generated from pyproject via `poetry export --without-hashes -f requirements.txt -o requirements.txt`

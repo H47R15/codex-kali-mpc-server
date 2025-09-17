@@ -1,0 +1,34 @@
+# Execution policy for the Kali MCP server.
+# Adjust these settings to tune which tools are available and what arguments they accept.
+
+global:
+  max_concurrent_runs: 2
+  default_timeout: 60
+
+tools:
+  nmap:
+    allowed_flags:
+      - "-sV"
+      - "-Pn"
+      - "-sC"
+    requires_target_confirmation: true
+    target_prefix_whitelist:
+      - "127.0.0.1"
+      - "192.168."
+      - "10."
+    default_timeout: 120
+  theharvester:
+    allowed_flags: []
+  dnsenum:
+    allowed_flags: []
+  sqlmap:
+    allowed_flags:
+      - "-u"
+      - "--batch"
+      - "--threads"
+  nikto:
+    allowed_flags:
+      - "-host"
+      - "-Tuning"
+  aircrack-ng:
+    allowed_flags: []

@@ -1,0 +1,6 @@
+# Local planning docs
+TODO.md
+
+# Python caches
+__pycache__/
+.pytest_cache/

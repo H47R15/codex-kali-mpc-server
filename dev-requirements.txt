@@ -1,0 +1,4 @@
+pytest
+pytest-asyncio
+pytest-httpx>=0.30
+pytest-docker

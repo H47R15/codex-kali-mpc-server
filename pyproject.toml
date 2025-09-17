@@ -1,19 +1,38 @@
 [tool.poetry]
+packages = [{ include = "kali_mcp_server", from = "src" }]
 name = "kali-mcp-server"
 version = "0.1.0"
 description = "Kali Linux Model Context Protocol server"
 authors = ["Cbyte Maintainers <maintainers@example.com>"]
 readme = "README.md"
 license = "MIT"
+include = [
+    "src/kali_mcp_server/assets/*.json",
+    "src/kali_mcp_server/assets/*.yaml"
+]
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.14"
 "mcp" = { version = ">=1.2.0", extras = ["cli"] }
 httpx = "^0.27.0"
+rapidfuzz = "^3.8.0"
+PyYAML = "^6.0.2"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.0"
+pytest-asyncio = "^0.24.0"
+pytest-httpx = "^0.30.0"
+pytest-docker = "^3.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.9.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+kali-mcp-server = "kali_mcp_server.server:main"
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: marks tests that require Docker and a container runtime",
+]
+asyncio_mode = "auto"

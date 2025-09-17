@@ -1,0 +1,51 @@
+name: kali-security
+image: ghcr.io/h47r15/kali-mcp-server:latest
+type: server
+meta:
+  category: security
+  tags:
+    - security
+    - pentesting
+    - vulnerability
+    - kali
+  author: Cbyte Maintainers
+about:
+  title: Kali Security MCP Server
+  description: |
+    Hardened Kali Linux MCP server curated for reconnaissance and vulnerability workflows.
+    Provides tool discovery helpers, NVD CVE lookups, and guarded execution of select Kali binaries with timeout and target allowlist enforcement.
+    Maintained by the Cbyte Maintainers team.
+  icon: https://www.kali.org/images/kali-logo-icon.svg
+  author: Cbyte Maintainers <maintainers@example.com>
+source:
+  project: https://github.com/H47R15/codex-kali-mpc-server
+  branch: main
+  directory: .
+  dockerfile: Dockerfile
+catalog:
+  readme: README.md
+  tools: docker/tools.json
+  resources:
+    - data/kali_tools.json
+    - config/policy.yaml
+config:
+  description: Optional guardrails for dataset overrides and execution policy tuning.
+  env:
+    - name: KALI_TOOL_DATA
+      description: Override path to `kali_tools.json` (for local experiments).
+      example: /mnt/datasets/custom_kali_tools.json
+    - name: KALI_POLICY_FILE
+      description: Path to an alternate policy file with allowlists and timeouts.
+      example: /mnt/config/policy.yaml
+    - name: KALI_TARGET_WHITELIST
+      description: Comma-separated target prefixes required for network tools (e.g., `192.168.1.,10.0.`).
+      example: 192.168.1.,10.0.
+    - name: KALI_MAX_CONCURRENT_RUNS
+      description: Override the number of concurrent tool executions (default 2).
+      example: "2"
+    - name: KALI_DEFAULT_TIMEOUT
+      description: Override default execution timeout (seconds).
+      example: "60"
+    - name: KALI_EXTRA_PATHS
+      description: Additional colon-separated directories appended to PATH before starting the server.
+      example: /opt/security/bin
